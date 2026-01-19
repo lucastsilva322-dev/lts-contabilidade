@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LTS - CONTABILIDADE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, Helvetica, sans-serif;
+            background: #f1f2f8;
+            color: #333;
+        }
+
+        header {
+            background: #3b3c4d;
+            color: white;
+            padding: 2px;
+            text-align: center;
+        }
+
+        nav {
+            background: #193e46;
+            padding: 5px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #0b3c5d;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .services {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        ul {
+            line-height: 2;
+        }
+
+        .contact {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        button {
+            background: #0b3c5d;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {background: #092e46;}
+
+        footer {background: #0b3c5d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>LTS - CONTABILIDADE</h1>
+    <p>Reliable • Accurate • Trusted</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- PAGE 1 -->
+<section id="home">
+    <div class="hero">
+        <h2>Why Choose Our Accounting Services?</h2>
+        <p>
+            We provide high-quality, reliable, and professional accounting services
+            designed to help individuals and businesses grow with confidence.
+        </p>
+        <p>
+            Our focus is accuracy, compliance, and clarity so you never have to
+            worry about financial errors or legal issues.
+        </p>
+        <p>
+            Whether you are starting a business, managing taxes, or need expert
+            consultation, we handle everything with care and professionalism.
+        </p>
+    </div>
+</section>
+
+<!-- PAGE 2 -->
+<section id="services">
+    <div class="services">
+        <h1>Nossos Serviços:</h1>
+        <h2>Contábeis:</h2>
+        <ul>
+            <li>Abertura de MEI, ME e EPP</li>
+            <li>Alterações de dados do CNPJ</li>
+            <li>Assessoria Contábil</li>
+            <li>Consultoria</li>
+            <li>Escrituração Contábil</li>
+            <li>Imposto de Renda</li>
+            <li>Emissão de Certidões</li>
+            <li>Emissão de Certificado Digital</li>
+            <li>Parcelamentos</li>
+            <li>Recálculo de Guias</li>
+            <li>Revisão de Cálculos</li>
+            <li>Regularização de Débitos e Pendências</li>
+        </ul>
+        <h2>Financeiro:</h2>
+        <ul>
+             <li>Assessoria Financeira</li>
+             <li>Admissão/Demissão e-Social</li>
+             <li>Cálculo de Folha</li>
+             <li>Cálculo de Rescisões</li>
+             <li>Conciliação Bancária</li>
+             <li>Consultoria Financeira</li>
+             <li>Contas a Pagar e Receber</li>
+             <li>Emissão de Notas Fiscais</li>
+             <li>Fluxo de Caixa</li>
+             <li>Geração de Relatórios</li>
+        </ul>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Phone / WhatsApp:</strong> +5511918728512</p>
+
+        <label for="message">Tell us what you want:</label>
+        <textarea id="message" placeholder="Write your requirement here..."></textarea>
+
+        <button onclick="sendWhatsApp()">Send on WhatsApp</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 LTS - CONTABILIDADE. All rights reserved.</p>
+</footer>
+
+<script>
+    function sendWhatsApp() {
+        var message = document.getElementById("message").value;
+        if (message.trim() === "") {
+            alert("Please write what you want before sending.");
+            return;
+        }
+        var phone = "+5511918728512";
+        var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+        window.open(url, "_blank");
+    }
+</script>
+
+</body>
+</html>
